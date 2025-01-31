@@ -2,6 +2,7 @@
 
 ## Overview
 This project is a **deep learning-powered web application** that classifies dog breeds from user-uploaded images. Built using **TensorFlow, Keras, and Django**, the model is trained on the **Stanford Dog Dataset (120 breeds)** using **EfficientNetB0**, achieving **87.73% accuracy and 90% precision**.
+[Web-Site Preview Video](https://drive.google.com/file/d/1BejEfmw3MYxrzwKXBfCbGrfvXX7oqxxh/view?usp=sharing)
 
 ## Features
 - **Deep Learning Model**: Uses **EfficientNetB0** for high-accuracy dog breed classification.

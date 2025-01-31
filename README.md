@@ -12,7 +12,6 @@ This project is a **deep learning-powered web application** that classifies dog 
 ## Tech Stack
 - **Backend**: Django, TensorFlow, Keras
 - **Frontend**: HTML, CSS, Bootstrap
-- **Database**: SQLite (or any preferred database)
 
 ## Installation
 ### Prerequisites
@@ -31,9 +30,6 @@ source venv/bin/activate  # On Windows use 'venv\Scripts\activate'
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Run migrations
-python manage.py migrate
 
 # Start the Django server
 python manage.py runserver

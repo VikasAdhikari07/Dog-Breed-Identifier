@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Result</title>
+{% endblock title %}
+
+{% block content %}
+    <h1>Here are you top 3 Possible breed</h1>
+    <div class="box">
+        {% for dog in prediction %}
+        <div><strong>{{forloop.counter }} - {{dog.name}}</strong><p>{{dog.probability}}%</p></div>
+        {% endfor %}
+    </div>
+    <a href="{% url "index" %}">Upload Another Image</a>
+{% endblock content %}

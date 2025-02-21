@@ -1,4 +1,4 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
             display: none;
         }
     </style> 
-    <link rel="stylesheet" href={% static "style.css" %}>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body>
     <nav>
@@ -30,7 +30,6 @@
         <h1>Identify breed of your dog with AI!</h1>
         <p>Upload a photo of your dog and let the AI identify the breed</p>
         <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
             <div class="mb-3">
                 <input class="form-control mt-2" type="file" id="formFileMultiple" name="image" multiple>
                 <input class="btn btn-primary mt-3" type="submit" value="Submit">

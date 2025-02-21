@@ -1,11 +1,9 @@
-import tensorflow as tf
 import os
-from django.conf import settings
 import numpy as np
-from tensorflow.keras.models import load_model # type: ignore
-from tensorflow.keras.preprocessing import image # type: ignore
+from tensorflow.keras.models import load_model  # type: ignore
+from tensorflow.keras.preprocessing import image  # type: ignore
 
-model = load_model(os.path.join(settings.BASE_DIR, "model_efficientnet.keras"))
+model = load_model("model_efficientnet.keras")
 breed = [
     'Chihuahua',
     'Japanese Spaniel',
@@ -137,7 +135,6 @@ def predict(path):
     img_array = np.expand_dims(img_array, axis=0)  # Expand to batch dimension
     predictions = model.predict(img_array)[0]
     top_indices = np.argsort(predictions)[-3:][::-1]  # Get top 3 highest probability indices
-
     top_breeds = [
         {"name": breed[i], "probability": ("%.2f" % (float(100)*float(predictions[i])))} for i in top_indices
     ]

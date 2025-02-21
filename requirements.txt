@@ -1,3 +1,0 @@
-django
-tensorflow-cpu
-numpy
